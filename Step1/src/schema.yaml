@@ -1,0 +1,22 @@
+title: Python/TensorFlow on ARM
+description: Python/TensorFlow on ARM
+schemaVersion: 1.1.0
+version: "20190304"
+
+
+variableGroups:
+  - title: "Environment Configuration"
+    variables:
+      - compartment_id
+  - title: "Tenancy Information"
+    variables:
+      - tenancy_ocid
+    visible: false
+
+variables:
+
+  compartment_id: 
+    type: oci:identity:compartment:id
+    title: "Compartment"
+    description: "The compartment in which to create resources"
+    required: true
