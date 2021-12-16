@@ -1,0 +1,35 @@
+<h2 id="using-tensorflow-with-arm-on-oracle-cloud-infrastructure">Using Tensorflow with ARM on Oracle Cloud Infrastructure</h2>
+<p>This is a quick guide on how I managed to use tensorflow with an ARM based CPU. 
+For this guide I&#39;ll be using <strong>Oracle&#39;s Ampere Altra shapes</strong>, that not only has very good specs (<a href="">Ampere Altra Datasheet</a>), but are also available at Oracle&#39;s Free Tier offering.
+<img src="" alt="">
+The Idea here is not just being a &quot;how-to&quot; but also being a CPU performance comparison between ARM  and x86 CPU. </p>
+<h3 id="lab-specs-">Lab specs:</h3>
+<ol>
+<li><h4 id="arm-vm-">Arm VM:</h4>
+<ul>
+<li>Shape: <strong>VM.Standard.A1.Flex</strong>;</li>
+<li>OCPU: <strong>2</strong> (Ampere Altra 3.0Ghz - Neoverse);</li>
+<li>Memory: <strong>8GB</strong>;</li>
+<li>Disk: <strong>50GB</strong> with the performance set to <strong>balanced</strong>, autotune disabled;</li>
+<li>OS: <strong>Oracle Linux 8.0</strong> (but you are free to choose the one that suites you best, just keep in mind to use the same OS on both VMs).</li>
+</ul>
+</li>
+<li><h4 id="x86-vm-">x86 VM:</h4>
+<ul>
+<li>Shape: <strong>VM.Standard.E3.Flex</strong>;</li>
+<li>OCPU: <strong>2</strong> (AMD Epyc 7742 2.25Ghz);</li>
+<li>Memory: <strong>8GB</strong>;</li>
+<li>Disk: <strong>50GB</strong> with the performance set to <strong>balanced</strong>, also no autotune;</li>
+<li>OS: <strong>Oracle Linux 8.0</strong> .</li>
+</ul>
+</li>
+</ol>
+<h3 id="steps-">Steps:</h3>
+<ol>
+<li><a href="sd">Setting up the environment</a></li>
+<li><a href="sd">Tensorflow/Python installation</a></li>
+<li><a href="sd">About the ML Model</a></li>
+<li><a href="sd">CPU Comparison</a></li>
+<li><a href="sd">Final considerations</a></li>
+</ol>
+<h4 id="hope-you-enjoy-">Hope you enjoy :)</h4>
