@@ -1,7 +1,37 @@
+// Variables
+
 variable "tenancy_ocid" {  
 }
 variable "compartment_id" {  
 }
+
+
+// Datasources
+
+data "oci_identity_availability_domains" "ADs" {
+  compartment_id = var.tenancy_ocid
+}
+
+data "oci_core_images" "image_arm" {
+  compartment_id           = var.compartment_id
+  operating_system         = "Oracle Linux"
+  operating_system_version = "8.0"
+  shape                    = "VM.Standard.A1.Flex"
+  sort_by                  = "TIMECREATED"
+  sort_order               = "DESC"
+}
+
+data "oci_core_images" "image_x86" {
+  compartment_id           = var.compartment_id
+  operating_system         = "Oracle Linux"
+  operating_system_version = "8.0"
+  shape                    = "VM.Standard.E3.Flex"
+  sort_by                  = "TIMECREATED"
+  sort_order               = "DESC"
+}
+
+
+
 
 
 
@@ -92,6 +122,50 @@ resource "oci_core_subnet" "arm_subnet" {
 }
 
 
+//ARM Compute
 
+resource "oci_core_instance" "arm_instance" {
+    #Required
+    availability_domain = lookup(data.oci_identity_availability_domains.ADs.availability_domains[0], "name")
+    compartment_id = var.compartment_id
+    shape = "VM.Standard.A1.Flex"
+    create_vnic_details {
+        assign_public_ip = true
+        subnet_id = oci_core_subnet.arm_subnet.id
+    }
+    display_name = "ARM-Instance"
+    metadata = { "ssh_authorized_keys" : "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDFzE3PbRsCb37lTiD6tCu2a/0Xj4yYmjExbg6xXD/Yjh9JN3D9FIhDHXFznixaRN3ni7HD37OqHEKBr06z2TyXigrZlnVP4i2LXXy0kRTJRyN6Zqc+VN1pz1GH+9pbWmd1tLfbHQy2Bp4hyRJO7qCP2QN4DUSMssxeASENZ61di3t9CiUExc061vKtdq+CSEMrR3619pvfDEF0wJ3n2we+pG/dL0oDWgxGR3m2pRYYHWQJr0HAFJ9dFyKO1zmNKJxDgjIU2jjcujBCzLpGyzfnCzt4loN8hVPTHpne0cAjJC/upZOOxUaOaGcmesUC6g007Y4RqWkE0mwZPHwKl4vN ssh-key-2021-06-09"}
+    shape_config {
+        memory_in_gbs = 8
+        ocpus = 2
+    }
+    source_details {
+        source_id = lookup(data.oci_core_images.image_arm.images[0], "id")
+        source_type = "image"
+    }
+    preserve_boot_volume = false
+}
 
+//ARM Compute
 
+resource "oci_core_instance" "x86_instance" {
+    #Required
+    availability_domain = lookup(data.oci_identity_availability_domains.ADs.availability_domains[0], "name")
+    compartment_id = var.compartment_id
+    shape = "VM.Standard.E3.Flex"
+    create_vnic_details {
+        assign_public_ip = true
+        subnet_id = oci_core_subnet.arm_subnet.id
+    }
+    display_name = "x86-Instance"
+    metadata = { "ssh_authorized_keys" : "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDFzE3PbRsCb37lTiD6tCu2a/0Xj4yYmjExbg6xXD/Yjh9JN3D9FIhDHXFznixaRN3ni7HD37OqHEKBr06z2TyXigrZlnVP4i2LXXy0kRTJRyN6Zqc+VN1pz1GH+9pbWmd1tLfbHQy2Bp4hyRJO7qCP2QN4DUSMssxeASENZ61di3t9CiUExc061vKtdq+CSEMrR3619pvfDEF0wJ3n2we+pG/dL0oDWgxGR3m2pRYYHWQJr0HAFJ9dFyKO1zmNKJxDgjIU2jjcujBCzLpGyzfnCzt4loN8hVPTHpne0cAjJC/upZOOxUaOaGcmesUC6g007Y4RqWkE0mwZPHwKl4vN ssh-key-2021-06-09"}
+    shape_config {
+        memory_in_gbs = 8
+        ocpus = 2
+    }
+    source_details {
+        source_id = lookup(data.oci_core_images.image_x86.images[0], "id")
+        source_type = "image"
+    }
+    preserve_boot_volume = false
+}

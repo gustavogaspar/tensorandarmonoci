@@ -18,5 +18,5 @@ variables:
   compartment_id: 
     type: oci:identity:compartment:id
     title: "Compartment"
-    description: "The compartment in which to create resources"
+    description: "The compartment in which the resource will be created"
     required: true
