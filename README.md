@@ -27,7 +27,7 @@ The Idea here is not just being a "how-to" but also being a CPU performance comp
 
 1. [Setting up the environment](sd)
 2. [Tensorflow/Python installation](sd)
-3. [About the ML Model](sd)
+3. [About the ML Model](./Step3.md)
 4. [CPU Comparison](sd)
 5. [Final considerations](sd)
 
