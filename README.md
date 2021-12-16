@@ -25,10 +25,10 @@ The Idea here is not just being a "how-to" but also being a CPU performance comp
 
 ### Steps:
 
-1. [Setting up the environment](sd)
-2. [Tensorflow/Python installation](sd)
+1. [Setting up the environment](./Step1/Step1.md)
+2. [Tensorflow/Python installation](./Step2/Step2.md)
 3. [About the ML Model](./Step3/Step3.md)
-4. [CPU Comparison](sd)
-5. [Final considerations](sd)
+4. [CPU Comparison](./Step4/Step4.md)
+5. [Final considerations](./Step5/Step5.md)
 
 #### Hope you enjoy :)

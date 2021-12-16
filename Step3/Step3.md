@@ -9,7 +9,7 @@ Fashion-MNIST is a dataset of [Zalando](https://jobs.zalando.com/tech/)'s articl
 This is a very cool dataset that  has a good amount of images, and also has a MIT license which perfect for a lab like this.
 
 ### 2. ML Model: Accuracy check
-The code used for to build this model was based on this guide:https://machinelearningmastery.com/how-to-develop-a-cnn-from-scratch-for-fashion-mnist-clothing-classification/. The logic behind this ML model is pretty simple:
+The code used to build this model was based on this guide:https://machinelearningmastery.com/how-to-develop-a-cnn-from-scratch-for-fashion-mnist-clothing-classification/. The logic behind this ML model is pretty simple:
 At first we download a set of images and train our model identifying what kind of clothing is that image based on their labels. This step tends to demand more from the processor:
 The second step is to validate a set of images on our model:
 Finally we check the accuracy of the second step:
@@ -30,4 +30,4 @@ $ python model.py
 6. Repeat the process on both machines and see the results
 
 
-[< ----- Back]()       |          [Home](../README.md)         |         [Next----- >]()
+[< ----- Back](../Step2/Step2.md)        |          [Home](../README.md)         |         [Next----- >](../Step4/Step4.md) 
