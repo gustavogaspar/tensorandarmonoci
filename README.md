@@ -3,6 +3,8 @@
 This is a quick guide on how I managed to use tensorflow with an ARM based CPU. 
 For this guide I'll be using **Oracle's Ampere Altra shapes**, that not only has very good specs ([Ampere Altra Datasheet]()), but are also available at [Oracle's Free Tier offering](https://www.oracle.com/cloud/free/).
 ![](./Picture1.png)
+
+
 The Idea here is not just being a "how-to" but also being a CPU performance comparison between ARM and x86 CPU. 
 
 ### Lab specs:
