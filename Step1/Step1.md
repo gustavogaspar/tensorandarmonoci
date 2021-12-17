@@ -65,7 +65,6 @@ In this step we will configure all that is needed to execute our testing using  
 13. On the Environment Configuration section, select a compartment. *(Remember to avoid using the root compartment)*
 \
 ![](./img/010-LAB1.PNG)
-\
 14. Click "Next"
 15. Check the "Run Apply" option
 \
