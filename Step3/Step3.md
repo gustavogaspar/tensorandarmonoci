@@ -107,5 +107,6 @@ $ python model.py
 ```
 6. Repeat the process on both machines and see the results
 
+7. Use the navigation bellow to go to the next step
 
-[< ----- Back]()       |          [Home](../README.md)         |         [Next----- >]()
+[< ----- Back](../Step2/Step2.md)      |          [Home](../README.md)         |         [Next----- >](../Step4/Step4.md) 
