@@ -21,7 +21,9 @@ Keep in mind that pricing is a information that changes, so always consult ["Ora
 ![](./img/0031-LAB4.PNG)
 \
 4. Arm (4xOCPUs) Pre-Built image:
-
+\
+![](./img/004-LAB4.PNG)
+\
 To change the shape of the instance, you can follow this steps:
 	1. Access the Oracle Cloud Console
 	2. On the top left corner, click on the menu icon, "Compute", and then click on "Instances"
@@ -48,6 +50,9 @@ To change the shape of the instance, you can follow this steps:
 \
 	9. Run the container again by following steps 14-16 from Lab2 of this guide
 5. Arm (4xOCPUs) Image built by script:
+\
+![](./img/0041-LAB4.PNG)
+\
 ### Price x Performance
 For this comparison, I'll consider 8GB of RAM for each VM. 
 *This pricing information was last checked (17/12/2021)*
