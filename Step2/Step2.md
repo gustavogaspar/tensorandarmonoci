@@ -79,7 +79,7 @@ Knowing that, we have some options:
 	 - To be able to run libs/packages that have a huge user base such as Tensorflow  will  always be one of the main focus of communities, and for ARM is no different.
 	 - ARM already has a container version available, not only for Tensorflow but also for other important libs such as Pytorch. You can find all of them on their official github:  https://github.com/ARM-software/Tool-Solutions.git
 
-Since we have a container version of Tensorflow, our approaches can be using a pre-built image of ARM's Dockerhub account, or to build it from the script that is available on their repo.
+Since we have a container version of Tensorflow, our approaches can be either by using a pre-built image of ARM's Dockerhub account, or to build it from the script that is available on their repo.
 I always recommend building it from the script, since the script is able to identify what version of ARM you have on your machine, to avoid compatibility issues and have a better optimization for your processor, but when I used this process it took me a WHILE to build the image (aprox. 2 hours using a 2xOCPUs shape.). If you have time go for it, for this lab we will use the pre-built docker image from their repo, so let's start by installing docker on our Instance:
 
 1. Access the Oracle Cloud Console
