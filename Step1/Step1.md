@@ -24,53 +24,53 @@ In this step we will configure all that is needed to execute our testing using  
 3. Insert your Cloud Account Name. 
 	- You will receive this information on your registration email
 	- Your email won't work on this field
-<br>
+\
 ![](./img/001-LAB1.PNG)
-<br>
+\
 4. On the next page, click on "Continue"
-<br>
+\
 ![](./img/002-LAB1.PNG)
-<br>
+\
 5. Insert your user/email and password and click "Sign In"
-<br>
+\
 ![](./img/003-LAB1.PNG)
-<br>
+\
 6. On the top search bar type "Resource Manager"
-<br>
+\
 ![](./img/004-LAB1.PNG)
-<br>
+\
 7. On the dynamic menu, under Services, select "Stacks"
-<br>
+\
 ![](./img/005-LAB1.PNG)
-<br>
+\
 8. Make sure that you have selected a compartment on to bottom left corner, under List Scope
 	- I highly recommend that you don't use the root compartment
 	- [Here is a guide](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingcompartments.htm) on how to create compartments. *Quick tip: refresh your page so it can load all the newly created compartments on the List Scope*
-<br>
+\
 ![](./img/006-LAB1.PNG)
-<br>
+\
 9. Click on "Create Stack"
-<br>
+\
 ![](./img/007-LAB1.PNG)
-<br>
+\
 10. On the Create Stack form, on the  Stack Configuration section select ".Zip File"
-<br>
+\
 ![](./img/008-LAB1.PNG)
-<br>
+\
 11. Drag and drop the zip file downloaded on the first step of this guide
-<br>
+\
 ![](./img/009-LAB1.PNG)
-<br>
+\
 12. Click "Next"
 13. On the Environment Configuration section, select a compartment. *(Remember to avoid using the root compartment)*
-<br>
+\
 ![](./img/010-LAB1.PNG)
-<br>
+\
 14. Click "Next"
 15. Check the "Run Apply" option
-<br>
+\
 ![](./img/011-LAB1.PNG)
-<br>
+\
 16. Click "Create"
 17. Wait for it's completion, and you are ready for the next step
 
