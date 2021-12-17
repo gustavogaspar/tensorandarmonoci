@@ -61,11 +61,10 @@ For this comparison, I'll consider 8GB of RAM for each VM.
 |--|--|--|
 | VM.Standard.E3.Flex (2x OCPUs ) | ~ $ 44 | ~115s - 125s|
 | VM.Standard.A1.Flex (2x OCPUs ) | ~ $ 22 | ~146s - 190s|
-| **VM.Standard.A1.Flex (4x OCPUs )** | **~ $ 37** | **~115s - 124s**|
+| **VM.Standard.A1.Flex (4x OCPUs )** | **~$ 37** | **~115s - 124s**|
 
 - As you can see,  ARM delivers a better price x performance overall. _if you take your time to build the docker image_ 
 - For the pre built image from docker hub I had a little less performance, dropping from 4-7s in execution time.
-- Another characteristic that caught my attention was the margin between the first/second test that I did on the E3 shape, with almost 10s of difference, showing that for single threaded applications ARM tends to have more stability (~5s of difference).
 - One more thing that caught my attention was the huge drop in execution time (~60s) by just giving 2 OCPUs more for the ARM shape
 - Probably on larger scales those characteristics will affect even more the performance of the application
 
