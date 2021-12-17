@@ -15,7 +15,7 @@ data "oci_identity_availability_domains" "ADs" {
 data "oci_core_images" "image_arm" {
   compartment_id           = var.compartment_id
   operating_system         = "Oracle Linux"
-  operating_system_version = "8.0"
+  operating_system_version = "8"
   shape                    = "VM.Standard.A1.Flex"
   sort_by                  = "TIMECREATED"
   sort_order               = "DESC"
@@ -24,7 +24,7 @@ data "oci_core_images" "image_arm" {
 data "oci_core_images" "image_x86" {
   compartment_id           = var.compartment_id
   operating_system         = "Oracle Linux"
-  operating_system_version = "8.0"
+  operating_system_version = "8"
   shape                    = "VM.Standard.E3.Flex"
   sort_by                  = "TIMECREATED"
   sort_order               = "DESC"
