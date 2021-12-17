@@ -134,6 +134,7 @@ $ sudo usermod -aG docker $USER
 8. Start the docker service
 ```bash
 $ sudo systemctl start docker
+$ sudo systemctl enable docker
 # You can type "sudo systemctl status docker" to check if the service is active and running
 ```
 10. Now it's time to get the container image from the official ARM repo, for that access: https://hub.docker.com/r/armswdev/tensorflow-arm-neoverse-n1
